@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Pemilihan2Percobaan222 {
 
     public static void main(String[] args) {      
@@ -40,9 +41,7 @@ public class Pemilihan2Percobaan222 {
             }
             total_bayar = harga - (harga * diskon);
             System.out.println("Total bayar setelah diskon = " + total_bayar); 
-        }
-
-        else if (member.equalsIgnoreCase("n")) {
+        } else if (member.equalsIgnoreCase("n")) {
             if (pilihan_menu == 1) {
                 harga = 14000;
                 System.out.println("Harga ricebowl = " + harga);
@@ -56,11 +55,22 @@ public class Pemilihan2Percobaan222 {
                 System.out.println("Masukkan pilihan menu dengan benar");
                 return;
             } 
-            System.out.println("Total bayar = " + harga);
+            total_bayar = harga;
+            System.out.println("Total bayar = " + total_bayar);
         } else {
             System.out.println("Member tidak valid");
+            return;
         }
-        System.out.println("----------------------------------------------");
 
+        String jenis_pembayaran;
+        System.out.print("Apakah pembayaran menggunakan QRIS (y/n)? = ");
+        jenis_pembayaran = input22.nextLine();
+        if (jenis_pembayaran.equalsIgnoreCase("y")) {
+            total_bayar -= 1000;
+            System.out.println("Anda mendapatkan potongan Rp. 1.000 karena menggunakan QRIS.");
+        }
+
+        System.out.println("----------------------------------------------");
+        System.out.println("Total bayar akhir = " + total_bayar);
     }
 }
