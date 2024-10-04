@@ -26,6 +26,7 @@ public class Pemilihan2Percobaan222 {
 
         if (member.equalsIgnoreCase("y")) {
             diskon = 0.10;
+            System.out.println("Besar diskon = 10%");
             if (pilihan_menu == 1) {
                 harga = 14000;
                 System.out.println("Harga ricebowl = " + harga);
@@ -40,6 +41,7 @@ public class Pemilihan2Percobaan222 {
                 return;
             }
             total_bayar = harga - (harga * diskon);
+
             System.out.println("Total bayar setelah diskon = " + total_bayar); 
         } else if (member.equalsIgnoreCase("n")) {
             if (pilihan_menu == 1) {
